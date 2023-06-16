@@ -1,36 +1,36 @@
-
-* { margin: 0;
-    padding: 0;
-    font-family: "Poppins",Helvetica,sans-serif;
-    box-sizing: border-box;
-    /* the padding and border of all elements are included within the specified 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Helvetica, sans-serif;
+  box-sizing: border-box;
+  /* the padding and border of all elements are included within the specified 
     width and height, rather than being added to it. */
-    }
-
-html{
-        scroll-behavior: smooth; /* Enables smooth scrolling behavior when clicking on buttons*/
 }
 
-p,li{
-    color : #666666 ;
-    font-size: 25px;
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling behavior when clicking on buttons*/
 }
 
-section{
-    margin-top: 100px;
+p,
+li {
+  color: #666666;
+  font-size: 25px;
 }
 
+section {
+  margin-top: 100px;
+}
 
-.container{
-    padding: 0px 100px; /* Adds horizontal padding to elements with the class "container" */
+.container {
+  padding: 0px 100px; /* Adds horizontal padding to elements with the class "container" */
 }
 
 body {
-    background-color: rgba(255,255,255,1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 header {
-    padding: 10px 10% ; /* 10% is the left and right padding value based 
+  padding: 10px 10%; /* 10% is the left and right padding value based 
     on the width of the containing block. */
 }
 
@@ -39,50 +39,50 @@ header {
 /*>>>------------------------------------------------------------------------------------------------------->>>*/
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Creates a responsive layout for the navigation bar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Creates a responsive layout for the navigation bar */
 }
 
 .logo {
-    width: 140px;
+  width: 140px;
 }
 
 nav ul li {
-    display: inline-block; /* allows the li elements to 
+  display: inline-block; /* allows the li elements to 
     appear horizontally next to each other while still retaining block-like properties. */
-    list-style: none;
-    margin: 10px 20px;  
+  list-style: none;
+  margin: 10px 20px;
 }
 
-nav .fas{
-    display: none; /* Hide The 'X' and the mobile menu icons */
+nav .fas {
+  display: none; /* Hide The 'X' and the mobile menu icon */
 }
 
-nav ul li a{ 
-    color: #333333;
-    text-decoration: none;
-    font-size: 18px;
+nav ul li a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 18px;
 
-/* Adds an animated line under each navigation link */
-    position : relative; /* Sets the position property to relative for navigation links */
+  /* Adds an animated line under each navigation link */
+  position: relative; /* Sets the position property to relative for navigation links */
 }
 
-nav ul li a::after{ 
-    content: '';
-    width : 0 ;
-    height: 3px ;
-    background: #007ced;
-    position : absolute; /* An element with position: absolute; is positioned relative to its 
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #007ced;
+  position: absolute; /* An element with position: absolute; is positioned relative to its 
     nearest positioned ancestor (any ancestor with a position other than static) Relative in this case*/
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
 }
 
-nav ul li a:hover::after{ 
-    width : 100% ; /* Expands the animated line on hover */
+nav ul li a:hover::after {
+  width: 100%; /* Expands the animated line on hover */
 }
 /* Adds an animated line under each navigation link - End*/
 /* Main Navigation bar End*/
@@ -94,56 +94,55 @@ nav ul li a:hover::after{
 /* Grid */
 
 .grid-wrapper {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit ,minmax(300px,1fr)); /*columns maintain a minimum
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /*columns maintain a minimum
      width of 300 pixels but can expand and fill the available space when there is extra room */
-    grid-template-rows: 1fr ;
-    height: 100%;
-    padding: 30px;
-    
+  grid-template-rows: 1fr;
+  height: 100%;
+  padding: 30px;
 }
 
 .profile-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .profile-img > img {
-    min-width: 50% ;
-    margin-left: auto;
-    /* Making a circle around profile image */
-    border-radius: 50%; 
-    border:20px solid #f7f6f6;
-    /* Making a circle around profile image end */
+  min-width: 50%;
+  margin-left: auto;
+  /* Making a circle around profile image */
+  border-radius: 50%;
+  border: 20px solid #f7f6f6;
+  /* Making a circle around profile image end */
 }
 
-
-
 .intro-text {
-    font-size:2em;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 30px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 30px;
 }
 
 .intro-text > h4 {
-color: #AAAAAA;
-margin: 0px 0px 10px ;
+  color: #aaaaaa;
+  margin: 0px 0px 10px;
 }
 
 .intro-text > h1 {
-    color: #333333;
-    margin: 0px 0px 20px ;
-    }
+  color: #333333;
+  margin: 0px 0px 20px;
+}
 
 .intro-text > p {
-
-    padding: 0px 50px 50px 0px;
-    line-height: 150%;
+  padding: 0px 50px 50px 0px;
+  line-height: 150%;
 }
 
 .intro-text > p > span {
@@ -151,50 +150,46 @@ margin: 0px 0px 10px ;
 }
 
 .btn {
-    font-weight: 700;
-    border-radius: 300px;
-    padding: 20px 40px;
+  font-weight: 700;
+  border-radius: 300px;
+  padding: 20px 40px;
 }
 
 .btn-primary {
-border:5px solid #007ced;
-color: #666666;
-font-size: 20px;
-/* We use the transition property to specify the transition and the 
+  border: 5px solid #007ced;
+  color: #666666;
+  font-size: 20px;
+  /* We use the transition property to specify the transition and the 
 duration of the transition for the hover effect.*/
-transition: background 0.5s;
+  transition: background 0.5s;
 }
 
-.btn a{
-    text-decoration: none;
-    color: #666666;
- 
+.btn a {
+  text-decoration: none;
+  color: #666666;
 }
 
-.btn-primary:hover{
-    background: #007ced;
-    
+.btn-primary:hover {
+  background: #007ced;
 }
 
-.btn-primary:hover a{
-    color: #f0f0f0;
-    cursor: pointer;
+.btn-primary:hover a {
+  color: #f0f0f0;
+  cursor: pointer;
 }
-
 
 .btn-secondary {
-    border:5px solid #AAAAAA;
-    transition: background 0.5s;
-    }
-
-.btn-secondary:hover{
-    background: #AAAAAA;
+  border: 5px solid #aaaaaa;
+  transition: background 0.5s;
 }
 
-.btn-secondary:hover a{
-   color: #f0f0f0 ;
+.btn-secondary:hover {
+  background: #aaaaaa;
 }
 
+.btn-secondary:hover a {
+  color: #f0f0f0;
+}
 
 /* Main Page Content - Intro end--->>/
 /*--------------------------------------------------------------------------------------------------------->>*/
@@ -203,95 +198,92 @@ transition: background 0.5s;
 /* Main Page Content - About Section --->>/
 /*---------------------------------------------------------------------------------------------------------->>*/
 
-#about{
-    color : #333333;
-
+#about {
+  color: #333333;
 }
 
 #about > .container {
-    
-    display: flex;
-    padding: 50px 30px;
-    height: 100%;
-    background-color: #f7f6f6;
-    background-size: auto;
-    align-items: center;
+  display: flex;
+  padding: 50px 30px;
+  height: 100%;
+  background-color: #f7f6f6;
+  background-size: auto;
+  align-items: center;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap : 20px;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .about-col-1 {
-    flex-basis:30%; /* the flex item should occupy 30% of the available space along the main axis.*/
-    /* Tip : flex: 0 0 30%; would set the flex item to have no 
+  flex-basis: 30%; /* the flex item should occupy 30% of the available space along the main axis.*/
+  /* Tip : flex: 0 0 30%; would set the flex item to have no 
     ability to grow or shrink and an initial size of 30% of the available space.*/
 }
 
 .about-col-1 img {
-    width:100%;
-    border-radius: 15px;
-    height:fit-content; /*when you want the height of an element to dynamically adjust based on its content.*/
+  width: 100%;
+  border-radius: 15px;
+  height: fit-content; /*when you want the height of an element to dynamically adjust based on its content.*/
 }
 
 .about-col-2 {
-    flex-basis: 65%;
+  flex-basis: 65%;
 }
 
-.sub-title{
-    font-size: 42px;
-    font-weight: 600;
-    padding : 0 0 20px;
+.sub-title {
+  font-size: 42px;
+  font-weight: 600;
+  padding: 0 0 20px;
 }
 
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40px;
-
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
 }
 
 .tab-links {
-    margin-right: 50px;
-    font-size: 28px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
+  margin-right: 50px;
+  font-size: 28px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
 }
 
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #007ced;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #007ced;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
 }
 
 .tab-links.active-link::after {
-    width: 50%;
+  width: 50%;
 }
 
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
 }
 
-.tab-contents ul li span{
-    color: #007ced;
-    font-size: 23;
+.tab-contents ul li span {
+  color: #007ced;
+  font-size: 23;
 }
 
 .tab-contents {
-    display: none;
+  display: none;
 }
 
-.tab-contents.active-tab{
-    display: block; /* occupying the full width available and starting on a new line.*/
+.tab-contents.active-tab {
+  display: block; /* occupying the full width available and starting on a new line.*/
 }
 
 /* Main Page Content - About end--->>/
@@ -302,57 +294,53 @@ transition: background 0.5s;
 /*----------------------------------------------------------------------------------------------------------->>*/
 
 #services {
-    height: 100%;
+  height: 100%;
 }
-
 
 .services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
 }
 
-.services-list div{
-    background: #f0f0f0;
-    padding: 40px;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 10px; 
-    transition: 0.5s, transform 0.5s;
+.services-list div {
+  background: #f0f0f0;
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 10px;
+  transition: 0.5s, transform 0.5s;
 }
 
+.services-list div:hover {
+  background: #007ced;
+  color: #f0f0f0;
+  transform: translateY(-10px);
+}
 
-.services-list div:hover{
-    background: #007ced; 
-    color: #f0f0f0;
-    transform: translateY(-10px);
-}   
-
-.services-list div:hover p{
-    color: #f0f0f0;
+.services-list div:hover p {
+  color: #f0f0f0;
 }
 
 .services-list div i {
-    font-size: 80px;
-    margin-bottom: 30px;
-
+  font-size: 80px;
+  margin-bottom: 30px;
 }
 
-.services-list div h2{
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 15px;
-
+.services-list div h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.services-list div a{
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 25px;
-    margin-top: 20px;
-    display: inline-block;
-    color: #333333;
+.services-list div a {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 20px;
+  display: inline-block;
+  color: #333333;
 }
 
 /* Main Page Content - My services end--->>/
@@ -362,82 +350,81 @@ transition: background 0.5s;
 /* Main Page Content - Portfolio Section --->>/
 /*---------------------------------------------------------------------------------------------------------->>*/
 
-
-.portfolioList{
-display: grid;
-grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-gap: 20px;
-padding: 20px;
+.portfolioList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-.project{
-    border-radius: 20px;
-    /* Animation */
-    position: relative;
-    /* By applying overflow: hidden;, any content that extends beyond 
+.project {
+  border-radius: 20px;
+  /* Animation */
+  position: relative;
+  /* By applying overflow: hidden;, any content that extends beyond 
     the specified width and height of the .project element will 
     be visually clipped and not displayed.*/
-    overflow: hidden; 
+  overflow: hidden;
 }
 
-.project img{
-   width: 100%;
-   padding-bottom: 20px ;
-   border-radius: 20px;
-   transition: transform 0.5s;
+.project img {
+  width: 100%;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  transition: transform 0.5s;
 }
 
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #007ced);
-    border-radius: 20px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    transition: height 0.5s;
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #007ced);
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
 }
 
-.layer h2{
-    font-weight: 600;
-    color: #f0f0f0;
+.layer h2 {
+  font-weight: 600;
+  color: #f0f0f0;
 }
 
-.layer p{
-    color: #f0f0f0;
-    padding: 30px; 
+.layer p {
+  color: #f0f0f0;
+  padding: 30px;
 }
 
-.layer a{
-    font-size: 30px;
-    color: #007ced;
-    text-decoration: none;
-    background: #fff;
-    line-height: 80px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+.layer a {
+  font-size: 30px;
+  color: #007ced;
+  text-decoration: none;
+  background: #fff;
+  line-height: 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
-.project:hover img{
-    transform: scale(1.1);
+.project:hover img {
+  transform: scale(1.1);
 }
 
-.project:hover .layer{
-    height: 100%;
+.project:hover .layer {
+  height: 100%;
 }
 
-#portfolio .container button{
-    display: block;
-    width: fit-content;
-    margin : 20px auto;
+#portfolio .container button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
 }
 
 /* Main Page Content - My Portfolio end--->>/
@@ -447,74 +434,74 @@ padding: 20px;
 /* Main Page Content - Contact me Section --->>/
 /*---------------------------------------------------------------------------------------------------------->>*/
 
-#contact .container{
-    margin : 100px 0 ;
+#contact .container {
+  margin: 100px 0;
 }
-.contact-left{
-    flex-basis: 35%;
-}
-
-.contact-right{
-    flex-basis: 60%;
+.contact-left {
+  flex-basis: 35%;
 }
 
-.contact-left h3{
-font-size: 25px;
-color: #007ced;
+.contact-right {
+  flex-basis: 60%;
 }
 
-.contact-left h3 i{
-    margin-right: 15px;
-    font-size: 35px;
-    color: #007ced;
+.contact-left h3 {
+  font-size: 25px;
+  color: #007ced;
 }
 
-.social-icons{
-    margin-top: 30px;
+.contact-left h3 i {
+  margin-right: 15px;
+  font-size: 35px;
+  color: #007ced;
 }
 
-.social-icons{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+.social-icons {
+  margin-top: 30px;
 }
 
-.social-icons a{
-    text-decoration: none;
-    font-size: 35px;
-    margin-right: 20px;
-    color: #666666;
-    transition: transform 0.5s;
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.social-icons a:hover{
-    color: #007ced;
-    transform: translateY(-5px);
+.social-icons a {
+  text-decoration: none;
+  font-size: 35px;
+  margin-right: 20px;
+  color: #666666;
+  transition: transform 0.5s;
 }
 
-.contact-right form{
-    width: 100%;
+.social-icons a:hover {
+  color: #007ced;
+  transform: translateY(-5px);
 }
 
-form input, form textarea{
-    width: 100%;
-    border : 1px solid #666666;
-    outline: none;
-    background: #fff ;
-    padding: 15px;
-    margin: 15px 0;
-    color: #262626;
-    font-size: 20px;
-    border-radius: 6px;
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 1px solid #666666;
+  outline: none;
+  background: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  color: #262626;
+  font-size: 20px;
+  border-radius: 6px;
 }
 
 #msg {
-    color: #909044;
-    margin-top: 10px;
-    display: block;
-    font-size: 22px;
+  color: #909044;
+  margin-top: 10px;
+  display: block;
+  font-size: 22px;
 }
-
 
 /* Main Page Content - Contact me Section end--->>/
 /*----------------------------------------------------------------------------------------------------------->>*/
@@ -523,49 +510,47 @@ form input, form textarea{
 /* Making the website responsive--->>/
 /*----------------------------------------------------------------------------------------------------------->>*/
 
+@media only screen and (max-width: 700px) {
+  p,
+  li {
+    font-size: 20px;
+  }
 
-@media only screen and (max-width :700px) {
+  h1 {
+    font-size: 1.1em;
+  }
 
-p,li{
-        font-size: 20px;
-}
-
-h1{ 
-font-size: 1.1em;
-}
-
-h4 {
+  h4 {
     font-size: 0.8em;
-}
+  }
 
-.sub-title{
+  .sub-title {
     font-size: 32px;
-}
-/* Intro */
+  }
+  /* Intro */
 
-.intro-text {
+  .intro-text {
     align-items: center;
     margin-top: -30px;
     padding-left: 0px;
-}
+  }
 
-.intro-text p {
-
+  .intro-text p {
     padding: 0px 10px 40px 10px;
     text-align: center;
-}
+  }
 
-.intro-buttons {
+  .intro-buttons {
     text-align: center;
-}
-/* Navigation bar */
+  }
+  /* Navigation bar */
 
-nav .fas{
+  nav .fas {
     display: block;
     font-size: 25px;
-}
+  }
 
-nav ul{
+  nav ul {
     background: #007ced;
     position: fixed;
     top: 0;
@@ -573,51 +558,51 @@ nav ul{
     width: 200px;
     height: 100vh;
     padding-top: 50px;
-    /* for javascript - to click on menu action */ 
+    /* for javascript - to click on menu action */
     z-index: 2;
     transition: right 0.5s;
-    /* for javascript - to click on menu action */ 
-}
+    /* for javascript - to click on menu action */
+  }
 
-nav ul li{
+  nav ul li {
     display: block;
     margin: 25px;
-}
+  }
 
-
-nav ul li a{
+  nav ul li a {
     color: #fff;
-}
-nav ul .fas{
+  }
+  nav ul .fas {
     position: absolute;
-    top : 25px;
+    top: 25px;
     left: 25px;
     cursor: pointer;
-}
+  }
 
-/* about section */
+  /* about section */
 
-.about-col-1, .about-col-2{
+  .about-col-1,
+  .about-col-2 {
     flex-basis: 100%;
-}
+  }
 
-.about-col-1{
+  .about-col-1 {
     margin-bottom: 30px;
-}
+  }
 
-.about-col-2{
+  .about-col-2 {
     font-size: 25px;
-}
+  }
 
-.tab-links{
+  .tab-links {
     font-size: 25px;
     margin-right: 20px;
-}
+  }
 
-/* Contact me section */
+  /* Contact me section */
 
-.contact-left, .contact-right{
+  .contact-left,
+  .contact-right {
     flex-basis: 100%;
-}
-
+  }
 }

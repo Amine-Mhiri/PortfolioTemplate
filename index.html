@@ -8,238 +8,306 @@ Github Repo : https://github.com/Amine-Mhiri/resume
 
 -->
 <!DOCTYPE html>
-<html>  
-    <head>
-        <!--meta tags for character encoding, compatibility, 
+<html>
+  <head>
+    <!--meta tags for character encoding, compatibility, 
             and responsive viewport settings.-->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width-device-width", initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width", initial-scale=1" />
 
-        <!-- Website Title -->
-        <title>Amine MHIRI | Fullstack Dev</title>
-        <!-- Keywords -->
-        <meta name="keywords"content="Fullstack developer, javascript, html, css, Tunisia, remote fullstack developer"/>
-        <!-- Small Description for SEO -->
-        <meta name="description" content="Amine MHIRI, Full stack developer with management and entrepreneurial skills"/>
-        <!--linking an external CSS file -->
-        <link rel="stylesheet" href="style.css" />
-          <!--script for using Font Awesome icons.(Make a free account and use icons from there)-->
-        <script src="https://kit.fontawesome.com/386f58a5aa.js" crossorigin="anonymous"></script>
+    <!-- Website Title -->
+    <title>Amine MHIRI | Fullstack Dev</title>
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="Fullstack developer, javascript, html, css, Tunisia, remote fullstack developer"
+    />
+    <!-- Small Description for SEO -->
+    <meta
+      name="description"
+      content="Amine MHIRI, Full stack developer with management and entrepreneurial skills"
+    />
+    <!--linking an external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!--script for using Font Awesome icons.(Make a free account and use icons from there)-->
+    <script
+      src="https://kit.fontawesome.com/386f58a5aa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-    </head>
+  <body>
+    <header>
+      <nav>
+        <img src="" alt="Personal Brand" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- The Font Awesome icons are used for the menu toggle. -->
+          <!--  icon 'X' for closing the mobile menu -->
+          <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <!--  icon for for the mobile menu -->
+        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+    </header>
 
-    <body>
-        <header>
-            <nav>
-                <img src="" alt="Personal Brand" class="logo">
-                <ul id="sidemenu">
-                    <li> <a href="#header">Home</a></li>
-                    <li> <a href="#about">About Me</a></li>
-                    <li> <a href="#services">Services</a></li>
-                    <li> <a href="#portfolio">Portfolio</a></li>
-                    <li> <a href="#contact">Contact</a></li>
-                    <!-- The Font Awesome icons are used for the menu toggle. -->
-                    <!--  icon 'X' for closing the mobile menu -->
-                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <!--  icon for for the mobile menu -->
-                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-        </header>
+    <!--Main Section Start-->
+    <main id="header">
+      <div class="grid-wrapper">
+        <div class="profile-img zone">
+          <img src="photos/profile-img.jpg" alt="Profile Image" />
+        </div>
 
-        <!--Main Section Start-->
-        <main id="header">
-                 
-            <div class="grid-wrapper">
-                <div class="profile-img zone">
-                    <img src="photos/profile-img.jpg" alt="Profile Image">
-                </div>
-                
-                <div class="intro-text zone">
-                    <h4>FullStack-Developer</h4>
-                    <h1>Amine Mhiri</h1> 
-                    <p>Passionate web and software developer. Strong background in management and leadership. End-to-End product development & entrepreneurial skills.<br/><span>Want to find out more ?</span></p>
-                        
-                        <div class="intro-buttons">
-                            <button  class="btn btn-primary"> <a href="photos/Resume Amine MHIRI.pdf" download>Download CV</a> </button>
-                            <button class="btn btn-secondary"> <a href="#contact">Contact</a> </button>
-                        </div>
-                </div>
-            </div>      
+        <div class="intro-text zone">
+          <h4>FullStack-Developer</h4>
+          <h1>Amine Mhiri</h1>
+          <p>
+            Passionate web and software developer. Strong background in
+            management and leadership. End-to-End product development &
+            entrepreneurial skills.<br /><span>Want to find out more ?</span>
+          </p>
 
-            
-        </main>
-        
-        <!--Main Section End-->
+          <div class="intro-buttons">
+            <button class="btn btn-primary">
+              <a href="photos/Resume Amine MHIRI.pdf" download>Download CV</a>
+            </button>
+            <button class="btn btn-secondary">
+              <a href="#contact">Contact</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
 
-        <!--About Section Start-->
+    <!--Main Section End-->
 
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1"> 
-                        <img src="photos/aboutme.jpg" alt="personal image">
-                    
-                    </div>
-                    <div class="about-col-2"> 
-                        <h2 class="sub-title">About Me</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem iure beatae ipsam hic recusandae nesciunt delectus ut. Molestiae quam, doloremque laboriosam, cumque voluptatum atque iure, praesentium reprehenderit consequatur alias esse?</p>
+    <!--About Section Start-->
 
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links " onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links "onclick="opentab('education')">Education</p>
-                        </div>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="photos/aboutme.jpg" alt="personal image" />
+          </div>
+          <div class="about-col-2">
+            <h2 class="sub-title">About Me</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+              iure beatae ipsam hic recusandae nesciunt delectus ut. Molestiae
+              quam, doloremque laboriosam, cumque voluptatum atque iure,
+              praesentium reprehenderit consequatur alias esse?
+            </p>
 
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>UI/UX</span><br>Designing Web/ App Interfaces</li>
-                                <li><span>Web development</span><br>Web app Development</li>
-                                <li><span>App development</span><br>Building Android /iOS apps</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2021- Current</span><br>Designing Web/ App Interfaces</li>
-                                <li><span>2019- 2021</span><br>Web app Development</li>
-                                <li><span>2017 -2019</span><br>Building Android /iOS apps</li>
-                                <li><span>2016 -2017</span><br>Internship at hammadi Abid</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2016</span><br>Designing Web/ App Interfaces</li>
-                                <li><span>2016</span><br>Web app Development</li>
-                                <li><span>2014</span><br>Building Android /iOS apps</li>
-                                <li><span>2014</span><br>Building Android /iOS apps</li>
-                                <li><span>2014</span><br>Building Android /iOS apps</li>
-                                <li><span>2014</span><br>Building Android /iOS apps</li>
-                      
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--About Section end-->
-
-        <!--Our services Section Start-->
-        <section id="services">
-            <div class="container">
-                <h2 class="sub-title">My Services</h2>
-                <div class="services-list">
-                    <div>
-                        <i class="fa-solid fa-code"></i>
-                        <h2>Web Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa accusantium exercitationem soluta minima impedit neque nemo quisquam architecto repudiandae tempora sequi, voluptas, laborum veritatis inventore ad, consequatur corrupti dicta totam.</p>
-                        <a href="#">Learn more</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-crop-simple"></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa accusantium exercitationem soluta minima impedit neque nemo quisquam architecto repudiandae tempora sequi, voluptas, laborum veritatis inventore ad, consequatur corrupti dicta totam.</p>
-                        <a href="#">Learn more</a>
-                    </div>
-                    <div>
-                        <i class="fa-brands fa-app-store"></i>
-                        <h2>App Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa accusantium exercitationem soluta minima impedit neque nemo quisquam architecto repudiandae tempora sequi, voluptas, laborum veritatis inventore ad, consequatur corrupti dicta totam.</p>
-                        <a href="#">Learn more</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--My services Section End---->
-
-        <!--My portfolio Section Start-->
-
-        <section id="portfolio">
-            <div class="container">
-                <h2 class="sub-title">My Portfolio</h2>
-                <div class="portfolioList">
-
-                    <div class="project">
-                        <img src="photos/robots.jpg">
-                        <div class="layer">
-                            <h2>RoboFriends</h2><br>
-                            <p><span>Technologies used:</span>Html, Css, Javascript, React, Tailwind</p>
-                            <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <img src="photos/male.jpg">
-                        <div class="layer">
-                            <h2>Web3Crypto</h2><br>
-                            <p><span>Technologies used:</span>Html, Css, Javascript, React, Tailwind</p>
-                            <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="project">
-                        <img src="photos/male.jpg">
-                        <div class="layer">
-                            <h2>CheapestPrice</h2><br>
-                            <p><span>Technologies used:</span>Html, Css, Javascript, React, Tailwind</p>
-                            <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-
-                 </div>
-                 <button class="btn btn-primary"><a href="#">See More</a> </button>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
 
-        </section>
-
-
-        <!--My portfolio Section End---->
-
-        <!--My Contact Section Start--->
-
-        <section id="contact">
-            <div class="container">
-               <div class="row">
-
-                    <div class="contact-left">
-                        <h2 class="sub-title">Contact Me</h2>
-                        <div class="phone">
-                            <h3><i class="fa-brands fa-whatsapp"></i> +216 28 00 73 93</h3>
-                            <p>Send me a direct message or let's schedule a call through Whatsapp</p><br>
-                         </div>
-                            
-                        <div class="mail">  
-                            <h3><i class="fa-regular fa-envelope"></i>mhiriamin@gmail.com</h3>
-                             <p>Send me a direct mail, documents or your proposals</p>
-                         </div>
-                        
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/amin-mhiri/"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/Amine-Mhiri"><i class="fa-brands fa-square-github"></i></a>
-                            <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <input type="text" name="Subject" placeholder="Subject">
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn-primary"><a>Send Message</a></button>
-                        </form>
-                        <span id="msg"></span>
-                    </div>
-
-               </div> 
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/ App Interfaces</li>
+                <li><span>Web development</span><br />Web app Development</li>
+                <li>
+                  <span>App development</span><br />Building Android /iOS apps
+                </li>
+              </ul>
             </div>
-        </section>
-    </body>
-      
 
-<script type="text/javascript" src="script.js"></script>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2021- Current</span><br />Designing Web/ App Interfaces
+                </li>
+                <li><span>2019- 2021</span><br />Web app Development</li>
+                <li><span>2017 -2019</span><br />Building Android /iOS apps</li>
+                <li><span>2016 -2017</span><br />Internship at hammadi Abid</li>
+              </ul>
+            </div>
 
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2016</span><br />Designing Web/ App Interfaces</li>
+                <li><span>2016</span><br />Web app Development</li>
+                <li><span>2014</span><br />Building Android /iOS apps</li>
+                <li><span>2014</span><br />Building Android /iOS apps</li>
+                <li><span>2014</span><br />Building Android /iOS apps</li>
+                <li><span>2014</span><br />Building Android /iOS apps</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Section end-->
+
+    <!--Our services Section Start-->
+    <section id="services">
+      <div class="container">
+        <h2 class="sub-title">My Services</h2>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              accusantium exercitationem soluta minima impedit neque nemo
+              quisquam architecto repudiandae tempora sequi, voluptas, laborum
+              veritatis inventore ad, consequatur corrupti dicta totam.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              accusantium exercitationem soluta minima impedit neque nemo
+              quisquam architecto repudiandae tempora sequi, voluptas, laborum
+              veritatis inventore ad, consequatur corrupti dicta totam.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              accusantium exercitationem soluta minima impedit neque nemo
+              quisquam architecto repudiandae tempora sequi, voluptas, laborum
+              veritatis inventore ad, consequatur corrupti dicta totam.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--My services Section End---->
+
+    <!--My portfolio Section Start-->
+
+    <section id="portfolio">
+      <div class="container">
+        <h2 class="sub-title">My Portfolio</h2>
+        <div class="portfolioList">
+          <div class="project">
+            <img src="photos/robots.jpg" />
+            <div class="layer">
+              <h2>RoboFriends</h2>
+              <br />
+              <p>
+                <span>Technologies used:</span>Html, Css, Javascript, React,
+                Tailwind
+              </p>
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="photos/male.jpg" />
+            <div class="layer">
+              <h2>Web3Crypto</h2>
+              <br />
+              <p>
+                <span>Technologies used:</span>Html, Css, Javascript, React,
+                Tailwind
+              </p>
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="photos/male.jpg" />
+            <div class="layer">
+              <h2>CheapestPrice</h2>
+              <br />
+              <p>
+                <span>Technologies used:</span>Html, Css, Javascript, React,
+                Tailwind
+              </p>
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary"><a href="#">See More</a></button>
+      </div>
+    </section>
+
+    <!--My portfolio Section End---->
+
+    <!--My Contact Section Start--->
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h2 class="sub-title">Contact Me</h2>
+            <div class="phone">
+              <h3><i class="fa-brands fa-whatsapp"></i> +216 28 00 73 93</h3>
+              <p>
+                Send me a direct message or let's schedule a call through
+                Whatsapp
+              </p>
+              <br />
+            </div>
+
+            <div class="mail">
+              <h3><i class="fa-regular fa-envelope"></i>mhiriamin@gmail.com</h3>
+              <p>Send me a direct mail, documents or your proposals</p>
+            </div>
+
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/amin-mhiri/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Amine-Mhiri"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <input type="text" name="Subject" placeholder="Subject" />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                <a>Send Message</a>
+              </button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script type="text/javascript" src="script.js"></script>
 </html>

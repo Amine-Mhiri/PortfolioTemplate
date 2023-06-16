@@ -3,55 +3,59 @@
 let tablinks = document.getElementsByClassName("tab-links");
 let tabcontents = document.getElementsByClassName("tab-contents");
 
+console.log(tablinks);
 function opentab(tabname) {
-    for(tablink of tablinks) {
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link"); /* How can we replace event in this */
-    document.getElementById(tabname).classList.add("active-tab");
+  for (tablink of tablinks) {
+    console.log(tablink);
+    tablink.classList.remove("active-link");
+  }
+  for (tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add(
+    "active-link"
+  ); /* How can we replace event in this */
+  document.getElementById(tabname).classList.add("active-tab");
 }
 
 /* End of the 1st Script  --------------------------------------------------------------------------------------------*/
 
-
 /* 2- Mobile Menu : Script to open and close menu--------------------------------------------------------------------- */
 let sidemenu = document.getElementById("sidemenu");
 function openmenu() {
-    sidemenu.style.right = "0";
+  sidemenu.style.right = "0";
 }
 
 function closemenu() {
-    sidemenu.style.right = "-200px";
+  sidemenu.style.right = "-200px";
 }
 
-/* End of the 2nd Script  -------------------------------------------------------------------------------------------*/ 
+/* End of the 2nd Script  -------------------------------------------------------------------------------------------*/
 
 /* 3- Contact me Form : Script to link your form to a google sheet account *------------------------------------------/
 /* For a step by step tutorial of this part check https://github.com/jamiewilson/form-to-google-sheets */
 
 /*the URL of a Google Apps Script. This script is set up to handle form submissions and write data to a Google Sheet.*/
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwoeP_D35zldxTb6Xwn5zWgXCcghcWOX9l_qoBWPEOk0pfnmQ8baamdFgTLsyaItQ4n/exec'
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwoeP_D35zldxTb6Xwn5zWgXCcghcWOX9l_qoBWPEOk0pfnmQ8baamdFgTLsyaItQ4n/exec";
 /*It allows to access and manipulate the form's properties and data.*/
-const form = document.forms['submit-to-google-sheet']
+const form = document.forms["submit-to-google-sheet"];
 /*used to display a success message or error message after submitting the form.*/
-const msg = document.getElementById("msg")
+const msg = document.getElementById("msg");
 
 /*When the form is submitted, the provided callback function will be executed.*/
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML =""
-        },5000)
-        form.reset();
-        })
-    .catch(error => console.error('Error!', error.message))
-})
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      msg.innerHTML = "Message sent successfully";
+      setTimeout(function () {
+        msg.innerHTML = "";
+      }, 5000);
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
 
 /* Explaining the 3rd Script 
 
