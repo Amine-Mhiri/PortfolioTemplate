@@ -9,28 +9,36 @@
 
 html {
   scroll-behavior: smooth; /* Enables smooth scrolling behavior when clicking on buttons*/
+  font-size: 0.9rem;
+}
+
+body {
+  padding: 2rem;
+  background-color: #007ced;
+}
+
+.page-content {
+  background-color: #ffffff;
+  border-radius: 3rem;
+  padding: 2rem;
 }
 
 p,
 li {
   color: #666666;
-  font-size: 25px;
+  font-size: 1.1rem;
 }
 
 section {
-  margin-top: 100px;
+  margin-top: 6rem;
 }
 
 .container {
-  padding: 0px 100px; /* Adds horizontal padding to elements with the class "container" */
-}
-
-body {
-  background-color: rgba(255, 255, 255, 1);
+  padding: 0 6rem; /* Adds horizontal padding to elements with the class "container" */
 }
 
 header {
-  padding: 10px 10%; /* 10% is the left and right padding value based 
+  padding: 0.6rem 6%; /* 10% is the left and right padding value based 
     on the width of the containing block. */
 }
 
@@ -46,14 +54,14 @@ nav {
 }
 
 .logo {
-  width: 140px;
+  width: 10rem;
 }
 
 nav ul li {
   display: inline-block; /* allows the li elements to 
     appear horizontally next to each other while still retaining block-like properties. */
   list-style: none;
-  margin: 10px 20px;
+  margin: 0.6rem 1.2rem;
 }
 
 nav .fas {
@@ -61,28 +69,35 @@ nav .fas {
 }
 
 nav ul li a {
-  color: #333333;
+  color: #333;
+  font-weight: 500;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1rem;
 
   /* Adds an animated line under each navigation link */
   position: relative; /* Sets the position property to relative for navigation links */
 }
 
+nav ul li a:hover {
+  color: #666666;
+  font-weight: 600;
+}
+
 nav ul li a::after {
   content: "";
   width: 0;
-  height: 3px;
+  height: 0.2rem;
   background: #007ced;
   position: absolute; /* An element with position: absolute; is positioned relative to its 
     nearest positioned ancestor (any ancestor with a position other than static) Relative in this case*/
   left: 0;
-  bottom: -6px;
+  bottom: -0.4rem;
   transition: 0.5s;
 }
 
 nav ul li a:hover::after {
-  width: 100%; /* Expands the animated line on hover */
+  width: 100%;
+  /* Expands the animated line on hover */
 }
 /* Adds an animated line under each navigation link - End*/
 /* Main Navigation bar End*/
@@ -95,54 +110,54 @@ nav ul li a:hover::after {
 
 .grid-wrapper {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 1.2rem;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(300px, 1fr)
+    minmax(280px, 1fr)
   ); /*columns maintain a minimum
      width of 300 pixels but can expand and fill the available space when there is extra room */
   grid-template-rows: 1fr;
-  height: 100%;
-  padding: 30px;
+  height: 90%;
+  padding: 6rem 7rem 5rem 3rem;
 }
 
 .profile-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
 }
 
 .profile-img > img {
-  min-width: 50%;
+  height: 60vh;
   margin-left: auto;
   /* Making a circle around profile image */
   border-radius: 50%;
-  border: 20px solid #f7f6f6;
+  border: 1.2rem solid #f7f6f6;
   /* Making a circle around profile image end */
 }
 
 .intro-text {
-  font-size: 2em;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-left: 30px;
+  padding-left: 1.8rem;
 }
 
 .intro-text > h4 {
   color: #aaaaaa;
-  margin: 0px 0px 10px;
+  margin: 0.6rem 0 0.6rem;
 }
 
 .intro-text > h1 {
   color: #333333;
-  margin: 0px 0px 20px;
+  margin: 0.6rem 0 1.2rem;
 }
 
 .intro-text > p {
-  padding: 0px 50px 50px 0px;
+  padding: 0 3rem 3rem 0;
   line-height: 150%;
+  font-size: 1.2rem;
 }
 
 .intro-text > p > span {
@@ -150,15 +165,15 @@ nav ul li a:hover::after {
 }
 
 .btn {
-  font-weight: 700;
-  border-radius: 300px;
-  padding: 20px 40px;
+  font-weight: 600;
+  border-radius: 18rem;
+  padding: 1rem 2rem;
 }
 
 .btn-primary {
-  border: 5px solid #007ced;
+  border: 3px solid #007ced;
   color: #666666;
-  font-size: 20px;
+  font-size: 1rem;
   /* We use the transition property to specify the transition and the 
 duration of the transition for the hover effect.*/
   transition: background 0.5s;
@@ -179,7 +194,7 @@ duration of the transition for the hover effect.*/
 }
 
 .btn-secondary {
-  border: 5px solid #aaaaaa;
+  border: 3px solid #aaaaaa;
   transition: background 0.5s;
 }
 
@@ -202,52 +217,53 @@ duration of the transition for the hover effect.*/
   color: #333333;
 }
 
-#about > .container {
+#about .container {
   display: flex;
-  padding: 50px 30px;
-  height: 100%;
+  padding: 3.2rem 1.8rem;
+
   background-color: #f7f6f6;
-  background-size: auto;
   align-items: center;
 }
 
 .row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.2rem;
   justify-content: space-between;
 }
 
 .about-col-1 {
-  flex-basis: 30%; /* the flex item should occupy 30% of the available space along the main axis.*/
+  display: flex;
+  flex-basis: 35%; /* the flex item should occupy 30% of the available space along the main axis.*/
   /* Tip : flex: 0 0 30%; would set the flex item to have no 
     ability to grow or shrink and an initial size of 30% of the available space.*/
+  justify-content: right;
+  align-items: center;
 }
 
 .about-col-1 img {
   width: 100%;
-  border-radius: 15px;
-  height: fit-content; /*when you want the height of an element to dynamically adjust based on its content.*/
+  border-radius: 0.9rem;
+  max-height: 60vh; /*when you want the height of an element to dynamically adjust based on its content.*/
 }
 
 .about-col-2 {
-  flex-basis: 65%;
+  flex-basis: 60%;
 }
 
 .sub-title {
-  font-size: 42px;
+  font-size: 1.8rem;
   font-weight: 600;
-  padding: 0 0 20px;
+  padding: 0 0 1.2rem;
 }
 
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 1.2rem 0 2.4rem;
 }
 
 .tab-links {
-  margin-right: 50px;
-  font-size: 28px;
+  margin-right: 3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -270,7 +286,11 @@ duration of the transition for the hover effect.*/
 
 .tab-contents ul li {
   list-style: none;
-  margin: 10px 0;
+  margin: 0.8rem 0;
+}
+
+.about-col-2 > p {
+  padding-right: 5rem;
 }
 
 .tab-contents ul li span {
@@ -300,16 +320,16 @@ duration of the transition for the hover effect.*/
 .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
+  grid-gap: 2.4rem;
+  margin-top: 3rem;
 }
 
 .services-list div {
   background: #f0f0f0;
-  padding: 40px;
-  font-size: 20px;
+  padding: 2.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   transition: 0.5s, transform 0.5s;
 }
 
@@ -324,21 +344,21 @@ duration of the transition for the hover effect.*/
 }
 
 .services-list div i {
-  font-size: 80px;
-  margin-bottom: 30px;
+  font-size: 4.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .services-list div h2 {
-  font-size: 32px;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
 }
 
 .services-list div a {
   font-weight: 600;
   text-decoration: none;
-  font-size: 25px;
-  margin-top: 20px;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
   display: inline-block;
   color: #333333;
 }
@@ -353,12 +373,12 @@ duration of the transition for the hover effect.*/
 .portfolioList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 1.2rem;
+  padding: 1.2rem;
 }
 
 .project {
-  border-radius: 20px;
+  border-radius: 1.2rem;
   /* Animation */
   position: relative;
   /* By applying overflow: hidden;, any content that extends beyond 
@@ -369,8 +389,9 @@ duration of the transition for the hover effect.*/
 
 .project img {
   width: 100%;
-  padding-bottom: 20px;
-  border-radius: 20px;
+  height: 100%;
+  padding-bottom: 1.2rem;
+  border-radius: 1.2rem;
   transition: transform 0.5s;
 }
 
@@ -378,7 +399,7 @@ duration of the transition for the hover effect.*/
   width: 100%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), #007ced);
-  border-radius: 20px;
+  border-radius: 1.2rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -387,7 +408,7 @@ duration of the transition for the hover effect.*/
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 0 2.4rem;
   text-align: center;
   transition: height 0.5s;
 }
@@ -399,17 +420,17 @@ duration of the transition for the hover effect.*/
 
 .layer p {
   color: #f0f0f0;
-  padding: 30px;
+  padding: 1.8rem;
 }
 
 .layer a {
-  font-size: 30px;
+  font-size: 1.8rem;
   color: #007ced;
   text-decoration: none;
   background: #fff;
-  line-height: 80px;
-  width: 80px;
-  height: 80px;
+  line-height: 5rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
 }
 
@@ -424,7 +445,7 @@ duration of the transition for the hover effect.*/
 #portfolio .container button {
   display: block;
   width: fit-content;
-  margin: 20px auto;
+  margin: 1.2rem auto;
 }
 
 /* Main Page Content - My Portfolio end--->>/
@@ -446,22 +467,22 @@ duration of the transition for the hover effect.*/
 }
 
 .contact-left h3 {
-  font-size: 25px;
+  font-size: 1.3rem;
   color: #007ced;
 }
 
 .contact-left h3 i {
-  margin-right: 15px;
-  font-size: 35px;
+  margin-right: 0.9rem;
+  font-size: 2.1rem;
   color: #007ced;
 }
 
 .social-icons {
-  margin-top: 30px;
+  margin-top: 1.8rem;
 }
 
 .social-icons {
-  margin-top: 30px;
+  margin-top: 1.8rem;
   display: flex;
   justify-content: center;
 }
@@ -469,7 +490,7 @@ duration of the transition for the hover effect.*/
 .social-icons a {
   text-decoration: none;
   font-size: 35px;
-  margin-right: 20px;
+  margin-right: 1.2rem;
   color: #666666;
   transition: transform 0.5s;
 }
@@ -492,15 +513,15 @@ form textarea {
   padding: 15px;
   margin: 15px 0;
   color: #262626;
-  font-size: 20px;
+  font-size: 1.2rem;
   border-radius: 6px;
 }
 
 #msg {
   color: #909044;
-  margin-top: 10px;
+  margin-top: 0.7rem;
   display: block;
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 /* Main Page Content - Contact me Section end--->>/
@@ -510,10 +531,20 @@ form textarea {
 /* Making the website responsive--->>/
 /*----------------------------------------------------------------------------------------------------------->>*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
+  body {
+    background-color: #ffffff;
+    padding: 0;
+  }
+
+  .page-content {
+    background-color: #ffffff;
+    padding: 0;
+  }
+
   p,
   li {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 
   h1 {
@@ -525,18 +556,30 @@ form textarea {
   }
 
   .sub-title {
-    font-size: 32px;
+    font-size: 1.6rem;
+    text-align: center;
   }
   /* Intro */
 
+  .grid-wrapper {
+    padding: 2rem;
+    height: 80vh;
+    margin-bottom: 10rem;
+  }
+
+  .profile-img > img {
+    height: 40vh;
+    margin: auto;
+  }
+
   .intro-text {
     align-items: center;
-    margin-top: -30px;
+    margin-top: -1.8rem;
     padding-left: 0px;
   }
 
   .intro-text p {
-    padding: 0px 10px 40px 10px;
+    padding: 0 0.8rem 2.4rem 0.8rem;
     text-align: center;
   }
 
@@ -547,7 +590,7 @@ form textarea {
 
   nav .fas {
     display: block;
-    font-size: 25px;
+    font-size: 1.3rem;
   }
 
   nav ul {
@@ -566,7 +609,7 @@ form textarea {
 
   nav ul li {
     display: block;
-    margin: 25px;
+    margin: 1.3rem;
   }
 
   nav ul li a {
@@ -574,32 +617,67 @@ form textarea {
   }
   nav ul .fas {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 1.3rem;
+    left: 1.3rem;
     cursor: pointer;
   }
 
   /* about section */
 
+  #about > .container {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
   .about-col-1,
   .about-col-2 {
     flex-basis: 100%;
+    justify-content: center;
   }
 
   .about-col-1 {
-    margin-bottom: 30px;
+    margin-bottom: 1.8rem;
   }
 
   .about-col-2 {
-    font-size: 25px;
+    font-size: 1.3rem;
+  }
+
+  .tab-titles {
+    justify-content: center;
   }
 
   .tab-links {
-    font-size: 25px;
-    margin-right: 20px;
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
+  }
+
+  .about-col-2 > p {
+    padding: 0 2rem;
+  }
+
+  /* My services section */
+  #services > .container {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  /* Portfolio section */
+
+  #portfolio > .container {
+    padding: 0.5rem;
   }
 
   /* Contact me section */
+
+  #contact > .container {
+    padding: 2rem;
+    text-align: center;
+  }
 
   .contact-left,
   .contact-right {
