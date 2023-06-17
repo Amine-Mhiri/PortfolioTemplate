@@ -1,7 +1,10 @@
 #PortfolioTemplate ⚡️
 
+<<<<<<< HEAD
 ![ Overview of the Portfolio Website ](PersonalWebsitePortfolioTemplate.gif)
 
+=======
+>>>>>>> 0b62fdf34ec2ccaa41b902587ad19c7bd0a2da8c
 ## Features
 
 ⚡️ Modern UI Design
