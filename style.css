@@ -567,11 +567,6 @@ form textarea {
     margin-bottom: 10rem;
   }
 
-  .profile-img > img {
-    height: 40vh;
-    margin: auto;
-  }
-
   .intro-text {
     align-items: center;
     margin-top: -1.8rem;

@@ -1,5 +1,6 @@
-#PortfolioTemplate ⚡️ 
+#PortfolioTemplate ⚡️
 
+![ Overview of the Portfolio Website ](PersonalWebsitePortfolioTemplate.gif)
 
 ## Features
 
@@ -11,8 +12,7 @@
 ⚡️ Fully Responsive\
 ⚡️ Valid HTML5 & CSS3\
 
-
-To view the demo: **[click here](https://the-simplefolio.netlify.app/)**
+To view the demo: **[click here](https://amine-mhiri.github.io/PortfolioTemplate/)**
 
 ---
 
@@ -25,7 +25,6 @@ To view the demo: **[click here](https://the-simplefolio.netlify.app/)**
 ## Getting Started 🚀
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 
 ## How To Use 🔧
 
