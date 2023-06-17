@@ -1,5 +1,7 @@
 #PortfolioTemplate ⚡️
-![Uploading PersonalWebsitePortfolioTemplate.gif…]()
+
+![PersonalWebsitePortfolioTemplate](https://github.com/Amine-Mhiri/PortfolioTemplate/assets/133148739/c22abc1a-c93e-436b-b2c5-909a46c8d881)
+
 
 ## Features
 
