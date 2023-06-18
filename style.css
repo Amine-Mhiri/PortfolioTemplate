@@ -564,7 +564,7 @@ form textarea {
   .grid-wrapper {
     padding: 2rem;
     height: 80vh;
-    margin-bottom: 20rem;
+    margin-bottom: 13rem;
   }
 
   .intro-text {
@@ -672,6 +672,16 @@ form textarea {
     padding: 0.5rem;
   }
 
+  .layer p {
+    padding: 1rem;
+  }
+
+  .layer a {
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 3rem;
+    height: 3rem;
+  }
   /* Contact me section */
 
   #contact > .container {
