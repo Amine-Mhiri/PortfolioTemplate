@@ -54,7 +54,7 @@ nav {
 }
 
 .logo {
-  width: 10rem;
+  width: 8rem;
 }
 
 nav ul li {
@@ -128,7 +128,7 @@ nav ul li a:hover::after {
 }
 
 .profile-img > img {
-  height: 60vh;
+  max-width: 70%;
   margin-left: auto;
   /* Making a circle around profile image */
   border-radius: 50%;
@@ -564,7 +564,7 @@ form textarea {
   .grid-wrapper {
     padding: 2rem;
     height: 80vh;
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
 
   .intro-text {
@@ -576,6 +576,11 @@ form textarea {
   .intro-text p {
     padding: 0 0.8rem 2.4rem 0.8rem;
     text-align: center;
+  }
+
+  .profile-img > img {
+    max-width: 70%;
+    margin: 1rem 0;
   }
 
   .intro-buttons {
