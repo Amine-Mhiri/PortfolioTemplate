@@ -1,10 +1,8 @@
 #PortfolioTemplate ⚡️
 
-<<<<<<< HEAD
-![ Overview of the Portfolio Website ](PersonalWebsitePortfolioTemplate.gif)
+![PersonalWebsitePortfolioTemplate](https://github.com/Amine-Mhiri/PortfolioTemplate/assets/133148739/c22abc1a-c93e-436b-b2c5-909a46c8d881)
 
-=======
->>>>>>> 0b62fdf34ec2ccaa41b902587ad19c7bd0a2da8c
+
 ## Features
 
 ⚡️ Modern UI Design
