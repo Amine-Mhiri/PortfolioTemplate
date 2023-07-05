@@ -39,9 +39,9 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
 
   <body>
     <div class="page-content">
-      <header>
-        <nav>
-          <img src="photos/Logo-AM.png" alt="Personal Brand" class="logo" />
+      <header class="header">
+        <nav class="nav">
+          <img src="img/Logo-AM.png" alt="Personal Brand" class="logo" />
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About Me</a></li>
@@ -58,11 +58,11 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
       </header>
 
       <!--Main Section Start-->
-      <main id="header">
+      <main class="main section">
         <div class="grid-wrapper">
           <div class="profile-img zone">
             <!-- Put over here the path for your image photos/image.jpg for example -->
-            <img src="photos/portrait.jpg" alt="Profile Image" />
+            <img src="img/portrait.jpg" alt="Profile Image" />
           </div>
 
           <div class="intro-text zone">
@@ -91,11 +91,16 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
 
       <!--About Section Start-->
 
-      <section id="about">
+      <section id="about" class="section">
         <div class="container">
           <div class="row">
             <div class="about-col-1">
-              <img src="photos/take-over.jpg" alt="personal image" />
+              <img
+                src="img/take-over-lazy.jpg"
+                data-src="img/take-over.jpg"
+                alt="personal image"
+                class="lazy-img"
+              />
             </div>
             <div class="about-col-2">
               <h2 class="sub-title">About Me</h2>
@@ -107,15 +112,9 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
               </p>
 
               <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills')">
-                  Skills
-                </p>
-                <p class="tab-links" onclick="opentab('experience')">
-                  Experience
-                </p>
-                <p class="tab-links" onclick="opentab('education')">
-                  Education
-                </p>
+                <p class="tab-links active-link">Skills</p>
+                <p class="tab-links">Experience</p>
+                <p class="tab-links">Education</p>
               </div>
 
               <div class="tab-contents active-tab" id="skills">
@@ -161,7 +160,7 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
       <!--About Section end-->
 
       <!--My services Section Start-->
-      <section id="services">
+      <section class="section" id="services">
         <div class="container">
           <h2 class="sub-title">My Services</h2>
           <div class="services-list">
@@ -206,12 +205,17 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
 
       <!--My portfolio Section Start-->
 
-      <section id="portfolio">
+      <section class="section" id="portfolio">
         <div class="container">
           <h2 class="sub-title">My Portfolio</h2>
           <div class="portfolioList">
             <div class="project">
-              <img src="photos/robots.jpg" />
+              <img
+                src="img/robots-lazy.jpg"
+                data-src="img/robots.jpg"
+                alt="AI Robots project API"
+                class="img lazy-img"
+              />
               <div class="layer">
                 <h2>RoboFriends</h2>
                 <br />
@@ -226,7 +230,12 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
             </div>
 
             <div class="project">
-              <img src="photos/male.jpg" />
+              <img
+                src="img/male-lazy.jpg"
+                data-src="img/male.jpg"
+                alt="AI and data-driven web developer"
+                class="img lazy-img"
+              />
               <div class="layer">
                 <h2>Web3Crypto</h2>
                 <br />
@@ -241,7 +250,12 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
             </div>
 
             <div class="project">
-              <img src="photos/male.jpg" />
+              <img
+                src="img/male-lazy.jpg"
+                data-src="img/male.jpg"
+                alt="AI and data-driven web developer"
+                class="img lazy-img"
+              />
               <div class="layer">
                 <h2>CheapestPrice</h2>
                 <br />
@@ -263,7 +277,7 @@ Github Repo : https://github.com/Amine-Mhiri/PortfolioTemplate
 
       <!--My Contact Section Start--->
 
-      <section id="contact">
+      <section class="section" id="contact">
         <div class="container">
           <div class="row">
             <div class="contact-left">

@@ -1,26 +1,55 @@
-/* 1- About section : Adding interactivity & showing content when clicking on skills / Education or Experience  */
+// 1- sticky Navigation bar : Intersection Observer API :
+const main = document.querySelector(".main");
+const header = document.querySelector(".header");
+const navHeight = header.getBoundingClientRect().height;
 
-let tablinks = document.getElementsByClassName("tab-links");
-let tabcontents = document.getElementsByClassName("tab-contents");
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) header.classList.add("sticky");
+  else header.classList.remove("sticky");
+};
 
-console.log(tablinks);
-function opentab(tabname) {
-  for (tablink of tablinks) {
-    console.log(tablink);
-    tablink.classList.remove("active-link");
-  }
-  for (tabcontent of tabcontents) {
-    tabcontent.classList.remove("active-tab");
-  }
-  event.currentTarget.classList.add(
-    "active-link"
-  ); /* How can we replace event in this */
-  document.getElementById(tabname).classList.add("active-tab");
-}
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
 
+headerObserver.observe(main);
+//************************************************************************************************************/
 /* End of the 1st Script  --------------------------------------------------------------------------------------------*/
 
-/* 2- Mobile Menu : Script to open and close menu--------------------------------------------------------------------- */
+/* 2- About section : Tabbed Component 
+Adding interactivity & showing content when clicking on skills / Education or Experience  
+************************************************************************************************************/
+
+const tabLinks = document.querySelectorAll(".tab-links");
+const tabContents = document.querySelectorAll(".tab-contents");
+const linksContainer = document.querySelector(".tab-titles");
+
+// Event Delegation
+linksContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".tab-links");
+
+  // Guard Clause
+  if (!clicked) return;
+
+  // remove Active classes
+  tabLinks.forEach((t) => t.classList.remove("active-link"));
+  tabContents.forEach((c) => c.classList.remove("active-tab"));
+
+  // Activate link clicked
+  clicked.classList.add("active-link");
+  // Activate associated content
+  document
+    .querySelector(`#${clicked.textContent.toLowerCase()}`)
+    .classList.add("active-tab");
+});
+
+/* End of the 2nd Script  --------------------------------------------------------------------------------------------*/
+
+/* 3- Mobile Menu : Script to open and close menu--------------------------------------------------------------------- */
+/* Using OnClick in html with these two functions */
 let sidemenu = document.getElementById("sidemenu");
 function openmenu() {
   sidemenu.style.right = "0";
@@ -30,9 +59,58 @@ function closemenu() {
   sidemenu.style.right = "-200px";
 }
 
-/* End of the 2nd Script  -------------------------------------------------------------------------------------------*/
+/* End of the 3rd Script  -------------------------------------------------------------------------------------------*/
 
-/* 3- Contact me Form : Script to link your form to a google sheet account *------------------------------------------/
+/* 4-1 Reveal sections on scrolling *---------------------------------------------------------------------------------*/
+
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.2,
+});
+
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+  section.classList.add("hidden");
+});
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* 4-2 Lazy Loading Images / Good for performance*-----------------------------------------------------------------*/
+const imgsTargeted = document.querySelectorAll("img[data-src]");
+
+const replaceImg = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    console.log(entry.target);
+
+    //Replacing low quality images with good quality ones
+    entry.target.src = entry.target.dataset.src;
+
+    entry.target.addEventListener("load", function () {
+      entry.target.classList.remove("lazy-img");
+    });
+
+    observer.unobserve(entry.target);
+  });
+};
+
+imgObserver = new IntersectionObserver(replaceImg, {
+  root: null,
+  threshold: 0,
+});
+
+imgsTargeted.forEach((img) => imgObserver.observe(img));
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* 5- Contact me Form : Script to link your form to a google sheet account *------------------------------------------/
 /* For a step by step tutorial of this part check https://github.com/jamiewilson/form-to-google-sheets */
 
 /*the URL of a Google Apps Script. This script is set up to handle form submissions and write data to a Google Sheet.*/
@@ -57,7 +135,7 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
-/* Explaining the 3rd Script 
+/* Explaining the 5th Script --------------------------------------------------------------------------
 
 - e.preventDefault(): This line prevents the default form submission behavior, which would cause the page to refresh.
 
@@ -84,5 +162,3 @@ Overall, this code sets up an event listener on the form submission, prevents th
 behavior, sends a POST request to the specified script URL, handles the response (success or error), 
 displays a success message, clears the form, and logs any errors that occur. It provides a way to submit
  the form data to a Google Sheet using a Google Apps Script as the intermediary.*/
-
-/* End of the 3rd Script  ------------------------------------------------------------------------------------*/

@@ -53,6 +53,16 @@ nav {
   flex-wrap: wrap; /* Creates a responsive layout for the navigation bar */
 }
 
+/* nav and sticky class at the same time */
+.header.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  z-index: 100;
+}
+
 .logo {
   width: 8rem;
 }
@@ -392,7 +402,16 @@ duration of the transition for the hover effect.*/
   height: 100%;
   padding-bottom: 1.2rem;
   border-radius: 1.2rem;
-  transition: transform 0.5s;
+  transition: transform 0.5s filter 0.5s;
+}
+
+/* Used for Lazy Loading Images ( Check JS 4-2 section for details)*/
+img {
+  transition: filter 0.5s;
+}
+
+.lazy-img {
+  filter: blur(20px);
 }
 
 .layer {
@@ -522,6 +541,18 @@ form textarea {
   margin-top: 0.7rem;
   display: block;
   font-size: 1.2rem;
+}
+
+/* Adding section and hidden class to reveal sections on scrolling / Check JS 4-1 */
+
+.section {
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 /* Main Page Content - Contact me Section end--->>/
